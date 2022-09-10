@@ -3,75 +3,67 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta charset="UTF-8">
   <title>BootCamp Visualization Dashboard</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
-<body style='background-color:lightgray;' >
-
-    <nav class="navbar navbar-expand-lg navbar-light p-0 bg-light">
-
-      <a class="navbar-brand bg-info ml-3 p-2 rounded text-white" href="index.html">Latitude</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Plots
-            </a>
+<body style='background-color:rgb(255, 255, 255);' >
+  <header>
+    <h1>Latitude</h1>
+    <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- Single button -->
+            <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots<span class="caret"></span>
+            <ul class="dropdown-menu">
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="./visualizations/temp.html">Max Temperature</a>
               <a class="dropdown-item" href="./visualizations/humidity.html">Humidity</a>
               <a class="dropdown-item" href="./visualizations/cloud.html">Cloudiness</a>
               <a class="dropdown-item" href="./visualizations/wind.html">Wind Speed</a>
-              <div class="dropdown-divider"></div>
-            </div>
+            </ul>
+          </button>
+          </div>
+          <li>
+            <a href="./visualizations/comparisons.html">Comparison</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./visualizations/comparison.html">Comparison</a>
-          </li>
-          <li class="nav-item active mr-3">
-            <a class="nav-link" href="./visualizations/data.html">Data</a>
+          <li>
+            <a href="./visualizations/Data.html">Data</a>
           </li>
         </ul>
-      </div>
-    </nav>
-
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-md-7 bg-white">
-          <h2 class="text-info mt-2">Summary: Latitude vs.X</h2>
-          <hr>
-          <img src="./Resources/assets/images/Fig1.png" alt="fig1" class="w-25 mr-4 float-left">
-          <p>The purpose of this project was to to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a datasetover 500 cities.</p>
-          <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: tempreature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and visulaization created part of the analysis, as well as explanations and  descriptions of any trends and correlations witnessed.</p>
-        </div>
-
-        <div class="col-md-4 bg-white ml-4">
-          <h2 class="mt-2 text-info">Visualizations</h2>
-          <hr>
-          <div class="row"><a href="./visualizations/temp.html" class="col-md-6"><img src="./Resources/assets/images/Fig1.png" alt="fig1" class="w-100"></a><a href="./visualizations/humidity.html" class="col-md-6"><img src="./Resources/assets/images/Fig2.png" alt="fig2" class="w-100"></a><a href="./visualizations/cloud.html" class="col-md-6"><img src="./Resources/assets/images/Fig3.png" alt="fig3" class="w-100"></a><a href="./visualizations/wind.html" class="col-md-6"><img src="./Resources/assets/images/Fig4.png" alt="Fig4" class="w-100"></a></div>
-        </div>
-      </div>
-
   </div>
+</header>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+<h3>Summary: Latitude vs. X</h3>
+<main class="container">
+  <section id="Summary">
+    <section id="figure">
+      <img src="Resources/assets/images/Fig1.png" height = "400" width = "600"/>
+    </section>
+    <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled the data from the OpenWeatherMap API to assemble a dataset on over 500 cities.   
+    </p>
+    <p>
+        After assembling the dataset, we used MatPlotLib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+    </p>
+  </section>
 
+  <aside id="Visualizations">
+    <h2>Visualizations</h2>
+    <section id="figure1">
+      <img src="Resources/assets/images/Fig1.png" height = "200" width = "300" />
+    </section>
+    <section id="figure2">
+      <img src="Resources/assets/images/Fig2.png" height = "200" width = "300" />
+    </section>
+    <section id="figure3">
+      <img src="Resources/assets/images/Fig3.png" height = "200" width = "300" />
+    </section>
+    <section id="figure4">
+      <img src="Resources/assets/images/Fig4.png" height = "200" width = "300" />
+    </section>
+  </aside>
+</main>
 </body>
-
+<script src="index.js"></script>
 </html>
